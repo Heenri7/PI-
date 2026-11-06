@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #073b32;
+}
+
+.pagina-cadastro {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #f3f8f5;
+}
+
+.cartao-cadastro {
+  box-sizing: border-box;
+  width: min(100%, 424px);
+  padding: 32px;
+  border: 1px solid #dce8e2;
+  border-radius: 12px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  color: #63756e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #cbd9d2;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #009b70;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+form > a {
+  color: #087c5a;
+  font-size: 14px;
+  text-align: center;
+}
+
+.erro {
+  color: #b42318;
+}
+
+.sucesso {
+  color: #087443;
+}
+
+@media (max-width: 480px) {
+  .cartao-cadastro {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "categorias": [
+    {
+      "id": "monitores",
+      "nome": "Monitores"
+    },
+    {
+      "id": "perifericos",
+      "nome": "Periféricos"
+    },
+    {
+      "id": "audio",
+      "nome": "Áudio"
+    },
+    {
+      "id": "smartphones",
+      "nome": "Smartphones"
+    },
+    {
+      "id": "notebooks",
+      "nome": "Notebooks"
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Teclado Mecânico RGB",
+      "preco": 350,
+      "quantidade": 20,
+      "categoria": "Periféricos",
+      "imagem": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Mouse Gamer Sem Fio",
+      "preco": 200,
+      "quantidade": 30,
+      "categoria": "Periféricos",
+      "imagem": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500"
+    },
+    {
+      "id": "3",
+      "nome": "Headset Gamer Surround 7.1",
+      "preco": 280.5,
+      "quantidade": 12,
+      "categoria": "Áudio",
+      "imagem": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500"
+    },
+    {
+      "id": "4",
+      "nome": "Monitor UltraWide 29\"",
+      "preco": 1250,
+      "quantidade": 5,
+      "categoria": "Monitores",
+      "imagem": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500"
+    },
+    {
+      "nome": "rayquazao",
+      "preco": 50,
+      "quantidade": 1,
+      "categoria": "Monitores",
+      "imagem": "https://imgs.search.brave.com/ZAqh6sME09uJVSXknITvV20iZhaXP0lb9aGvF7m-R8c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS83NDgv/dGh1bWJiaWctNzQ4/ODQxLndlYnA",
+      "id": "24OeJVpkBLQ"
+    }
+  ],
+  "adms": [
+    {
+      "id": "1",
+      "nome": "Administrador",
+      "email": "admin@voltix.com",
+      "senha": "AdminDemo2026!"
+    },
+    {
+      "nome": "henrique",
+      "email": "teste@gmail.com",
+      "senha": "123",
+      "id": "GZbFHRRo728"
+    },
+    {
+      "nome": "mateus",
+      "email": "mateus123@gmail.com",
+      "senha": "123",
+      "id": "KZ8KVU9bmwk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

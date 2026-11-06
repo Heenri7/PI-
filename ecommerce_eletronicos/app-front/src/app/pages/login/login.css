@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #073b32;
+}
+
+.pagina-login {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f8f5;
+}
+
+.cartao-login {
+  width: 360px;
+  padding: 32px;
+  border: 1px solid #dce8e2;
+  border-radius: 12px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  color: #63756e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #cbd9d2;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #009b70;
+  color: white;
+  font-size: 16px;
+}
+
+.botao-cadastro {
+  margin-top: 0;
+  padding: 10px 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 8px;
+  background-color: white;
+  color: #087c5a;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.botao-cadastro:hover {
+  background-color: #f3f8f5;
+}
+
+.erro {
+  color: #b42318;
+}
+
+.sucesso {
+  color: #087443;
+}

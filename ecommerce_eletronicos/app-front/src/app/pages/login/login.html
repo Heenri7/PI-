@@ -1,0 +1,40 @@
+<main class="pagina-login">
+  <section class="cartao-login">
+    <h1>Entrar como administrador</h1>
+    <p>Use seus dados de administrador para continuar.</p>
+
+    <form (ngSubmit)="entrar()">
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="admin@voltix.com"
+        [(ngModel)]="email"
+        required
+      />
+
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        name="senha"
+        type="password"
+        placeholder="Digite sua senha"
+        [(ngModel)]="senha"
+        required
+      />
+
+      <button class="botao-cadastro" type="button" routerLink="/cadastro">Criar uma conta</button>
+
+      <button type="submit" [disabled]="carregando">
+        {{ carregando ? 'Verificando...' : 'Entrar' }}
+      </button>
+
+      @if (mensagem) {
+        <p [class.sucesso]="mensagemSucesso" [class.erro]="!mensagemSucesso" role="status">
+          {{ mensagem }}
+        </p>
+      }
+    </form>
+  </section>
+</main>

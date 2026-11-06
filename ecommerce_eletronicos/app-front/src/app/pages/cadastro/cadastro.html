@@ -1,0 +1,51 @@
+<main class="pagina-cadastro">
+  <section class="cartao-cadastro">
+    <h1>Criar conta</h1>
+    <p>Preencha seus dados para criar uma conta de administrador.</p>
+
+    <form #cadastroForm="ngForm" (ngSubmit)="cadastrar()">
+      <label for="nome">Nome</label>
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        placeholder="Seu nome"
+        [(ngModel)]="nome"
+        required
+        pattern="[^0-9]+"
+      />
+
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="voce@exemplo.com"
+        [(ngModel)]="email"
+        required
+      />
+
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        name="senha"
+        type="password"
+        placeholder="Crie uma senha"
+        [(ngModel)]="senha"
+        required
+      />
+
+      <button type="submit" [disabled]="carregando || !cadastroForm.form.valid">
+        {{ carregando ? 'Criando conta...' : 'Criar conta' }}
+      </button>
+
+      @if (mensagem) {
+        <p [class.sucesso]="mensagemSucesso" [class.erro]="!mensagemSucesso" role="status">
+          {{ mensagem }}
+        </p>
+      }
+
+      <a routerLink="/login">Voltar para o login</a>
+    </form>
+  </section>
+</main>

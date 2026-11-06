@@ -1,0 +1,72 @@
+<main class="pagina-produtos">
+  <header class="cabecalho">
+    <a class="marca" routerLink="/produtos">Voltix</a>
+    <nav aria-label="Navegação principal">
+      <a routerLink="/produtos" routerLinkActive="ativo" ariaCurrentWhenActive="page">Produtos</a>
+      <a routerLink="/gerenciar" routerLinkActive="ativo" ariaCurrentWhenActive="page">Gerenciar</a>
+    </nav>
+    <button class="botao-sair" type="button" (click)="sair()">Sair</button>
+  </header>
+
+  <section class="conteudo">
+    <div class="introducao">
+      <div>
+        <p class="sobretitulo">CATÁLOGO</p>
+        <h1>Produtos</h1>
+        <p>Encontre o que você precisa.</p>
+      </div>
+      <label class="busca">
+        <span class="visualmente-oculto">Buscar produto pelo nome</span>
+        <input
+          type="search"
+          name="busca"
+          placeholder="Buscar produto..."
+          [(ngModel)]="termoBusca"
+        />
+      </label>
+    </div>
+
+    @if (mensagemErro) {
+      <p class="erro">{{ mensagemErro }}</p>
+    } @else if (carregando) {
+      <p class="estado">Carregando produtos...</p>
+    } @else {
+      @if (produtos.length === 0) {
+        <p class="estado">Nenhum produto cadastrado.</p>
+      } @else {
+        <div class="filtros" aria-label="Filtrar por categoria">
+          @for (categoria of categorias; track categoria) {
+            <button
+              type="button"
+              [class.ativo]="categoriaSelecionada === categoria"
+              [attr.aria-pressed]="categoriaSelecionada === categoria"
+              (click)="selecionarCategoria(categoria)"
+            >
+              {{ categoria }}
+            </button>
+          }
+        </div>
+
+        @if (produtosFiltrados.length === 0) {
+          <p class="estado">Nenhum produto encontrado.</p>
+        } @else {
+          <div class="lista-produtos">
+            @for (produto of produtosFiltrados; track produto.id) {
+              <article class="cartao-produto">
+                <img [src]="produto.imagem" [alt]="produto.nome" />
+                <div class="detalhes-produto">
+                  <p class="categoria">{{ produto.categoria }}</p>
+                  <h2>{{ produto.nome }}</h2>
+                  <div class="rodape-produto">
+                    <strong>{{ produto.preco | currency: 'BRL' }}</strong>
+                    <span>{{ produto.quantidade }} em estoque</span>
+                  </div>
+                </div>
+              </article>
+            }
+          </div>
+        }
+      }
+    }
+  </section>
+</main>
